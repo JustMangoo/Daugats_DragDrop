@@ -58,6 +58,38 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [3]);
 						break;
 
+					case "b2":
+						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [3]);
+						break;
+					
+					case "Cements":
+						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [3]);
+						break;
+
+					case "e46":
+						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [3]);
+						break;
+
+					case "Eskavators":
+						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [3]);
+						break;
+
+					case "Policija":
+						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [3]);
+						break;
+
+					case "Traktors1":
+						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [3]);
+						break;
+
+					case "Traktors5":
+						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [3]);
+						break;
+
+					case "Uguns":
+						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [3]);
+						break;
+
 					default:
 						Debug.Log ("Nedefinēts tags!");
 						break;
