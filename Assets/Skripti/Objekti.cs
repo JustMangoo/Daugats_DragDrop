@@ -54,7 +54,7 @@ public class Objekti : MonoBehaviour {
 	//Uzglabās pēdējo objektu, kurš pakustināts
 	public GameObject pedejaisVIlktais = null;
 
-	// Use this for initialization
+	//Koordinasu iegusana
 	void Start () {
 		atkrKoord = atkritumuMasina.GetComponent<RectTransform> ().localPosition;
 		atroKoord = atraPalidziba.GetComponent<RectTransform> ().localPosition;
