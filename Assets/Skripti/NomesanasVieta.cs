@@ -59,35 +59,35 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 						break;
 
 					case "b2":
-						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [3]);
+						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [4]);
 						break;
 					
 					case "Cements":
-						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [3]);
+						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [5]);
 						break;
 
 					case "e46":
-						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [3]);
+						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [6]);
 						break;
 
 					case "Eskavators":
-						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [3]);
+						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [7]);
 						break;
 
 					case "Policija":
-						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [3]);
+						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [8]);
 						break;
 
 					case "Traktors1":
-						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [3]);
+						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [9]);
 						break;
 
 					case "Traktors5":
-						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [3]);
+						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [10]);
 						break;
 
 					case "Uguns":
-						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [3]);
+						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [11]);
 						break;
 
 					default:
@@ -106,7 +106,7 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 				switch (notikums.pointerDrag.tag) {
 				case "Atkritumi":
 					objektuSkripts.atkritumuMasina.GetComponent<RectTransform> ().localPosition 
-							= objektuSkripts.atkrKoord;
+					= objektuSkripts.atkrKoord;
 					break; 
 
 				case "Slimnica":
@@ -117,6 +117,46 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 				case "Skola":
 					objektuSkripts.autobuss.GetComponent<RectTransform> ().localPosition 
 					= objektuSkripts.bussKoord;
+					break;
+
+				case "b2":
+					objektuSkripts.autobuss.GetComponent<RectTransform> ().localPosition 
+					= objektuSkripts.b2Koord;
+					break;
+
+				case "Cements":
+					objektuSkripts.autobuss.GetComponent<RectTransform> ().localPosition 
+					= objektuSkripts.cementaKoord;
+					break;
+
+				case "e46":
+					objektuSkripts.autobuss.GetComponent<RectTransform> ().localPosition 
+					= objektuSkripts.e46Koord;
+					break;
+
+				case "Eskavators":
+					objektuSkripts.autobuss.GetComponent<RectTransform> ().localPosition 
+					= objektuSkripts.eskavatorsKoord;
+					break;
+
+				case "Policija":
+					objektuSkripts.autobuss.GetComponent<RectTransform> ().localPosition 
+					= objektuSkripts.policijaKoord;
+					break;
+
+				case "Traktors1":
+					objektuSkripts.autobuss.GetComponent<RectTransform> ().localPosition 
+					= objektuSkripts.traktors1Koord;
+					break;
+
+				case "Traktors5":
+					objektuSkripts.autobuss.GetComponent<RectTransform> ().localPosition 
+					= objektuSkripts.traktors5Koord;
+					break;
+
+				case "Uguns":
+					objektuSkripts.autobuss.GetComponent<RectTransform> ().localPosition 
+					= objektuSkripts.ugunsKoord;
 					break;
 
 				default:
