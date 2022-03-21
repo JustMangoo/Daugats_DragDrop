@@ -11,6 +11,8 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 	private Vector2 vietasIzm, velkObjIzm;
 	//Norāde uz Objekti skriptu
 	public Objekti objektuSkripts;
+	//Skaita aizpilditas vietas
+	public int uzvSk=0;
 
 	//Nostrādās, ja objektu cenšas nomest uz jebkuras nomešanas  vietas
 	public void OnDrop(PointerEventData notikums){
@@ -48,18 +50,22 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 					switch (notikums.pointerDrag.tag) {
 					case "Atkritumi":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [1]);
+						uzvSk++;
 						break;
 
 					case "Slimnica":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [2]);
+						uzvSk++;
 						break;
 
 					case "Skola":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [3]);
+						uzvSk++;
 						break;
 
 					case "b2":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [4]);
+						uzvSk++;
 						break;
 					
 					case "Cements":
@@ -68,19 +74,21 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 
 					case "e46":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [6]);
+						uzvSk++;
 						break;
 
 					case "Eskavators":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [7]);
-						break;
+
+						uzvSk++;break;
 
 					case "Policija":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [8]);
-						break;
+						uzvSk++;break;
 
 					case "Traktors1":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [9]);
-						break;
+						uzvSk++;break;
 
 					case "Traktors5":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [10]);
@@ -88,11 +96,11 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 
 					case "Uguns":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [11]);
-						break;
+						uzvSk++;break;
 
 					default:
 						Debug.Log ("Nedefinēts tags!");
-						break;
+						uzvSk++;break;
 					}
 
 				}
