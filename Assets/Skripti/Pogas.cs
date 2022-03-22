@@ -9,4 +9,8 @@ public class Pogas : MonoBehaviour {
 	public void saktSpeli() {
 		SceneManager.LoadScene ("Pilseta");
 	}
+
+	public void restartet() {
+		SceneManager.LoadScene ("Menu");
+	}
 }

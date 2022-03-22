@@ -12,7 +12,41 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 	//Norāde uz Objekti skriptu
 	public Objekti objektuSkripts;
 	//Skaita aizpilditas vietas
-	public int uzvSk=0;
+	static public int uzvSk=0;
+
+	void Start () {
+		logs.SetActive(false);
+		zv1.SetActive(false);
+		zv2.SetActive(false);
+		zv3.SetActive(false);
+		restartet.SetActive(false);
+		teksts.SetActive(false);
+		laiks.SetActive(false);
+		uzvSk = 0;
+	}
+
+	public GameObject logs, zv1, zv2, zv3, restartet, teksts, laiks;
+	//skaita pareizi novietotas masinas
+	public void Update(){
+		if (uzvSk >= 11) {
+			Taimeris.beidzis = true;
+			logs.SetActive(true);
+			restartet.SetActive(true);
+			teksts.SetActive(true);
+			laiks.SetActive(true);
+			if (Taimeris.zvLaiks < 1) {
+				zv1.SetActive(true);
+				zv2.SetActive(true);
+				zv3.SetActive(true);
+			}else if (Taimeris.zvLaiks >= 1 && Taimeris.zvLaiks < 2) {
+				zv1.SetActive(true);
+				zv2.SetActive(true);
+			}else{
+				zv1.SetActive(true);
+			}
+
+		}
+	}
 
 	//Nostrādās, ja objektu cenšas nomest uz jebkuras nomešanas  vietas
 	public void OnDrop(PointerEventData notikums){
@@ -36,6 +70,7 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 				if ((rotacijasStarpiba <= 6 || (rotacijasStarpiba >= 354 && rotacijasStarpiba <= 360))
 				   && (xIzmeruStarp <= 0.1 && yIzmeruStarp <= 0.1)) {
 					objektuSkripts.vaiIstajaVieta = true;
+
 					//Noliktais objekts smuki iecentrējas nomešanas laukā
 					notikums.pointerDrag.GetComponent<RectTransform> ().anchoredPosition 
 								= GetComponent<RectTransform> ().anchoredPosition;
@@ -50,36 +85,30 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 					switch (notikums.pointerDrag.tag) {
 					case "Atkritumi":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [1]);
-						uzvSk++;
-						break;
+						uzvSk++;break;
 
 					case "Slimnica":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [2]);
-						uzvSk++;
-						break;
+						uzvSk++;break;
 
 					case "Skola":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [3]);
-						uzvSk++;
-						break;
+						uzvSk++;break;
 
 					case "b2":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [4]);
-						uzvSk++;
-						break;
+						uzvSk++;break;
 					
 					case "Cements":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [5]);
-						break;
+						uzvSk++;break;
 
 					case "e46":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [6]);
-						uzvSk++;
-						break;
+						uzvSk++;break;
 
 					case "Eskavators":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [7]);
-
 						uzvSk++;break;
 
 					case "Policija":
@@ -92,7 +121,7 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 
 					case "Traktors5":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [10]);
-						break;
+						uzvSk++;break;
 
 					case "Uguns":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanaKoAtskanot [11]);
